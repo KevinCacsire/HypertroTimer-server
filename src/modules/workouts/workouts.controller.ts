@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { WorkoutsService } from './workouts.service';
 import { Exercise } from '../../model/exercise';
-import { WorkoutInstance } from '../../model/WorkoutInstance';
+import { WorkoutInstance } from '../../model/workoutInstance';
 
 @Controller('users')
 export class WorkoutsController {

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Exercise } from '../../model/exercise';
 import { addDoc, collection, deleteDoc, doc, getDocs, query, where } from 'firebase/firestore';
 import { firestore } from 'src/app.module';
-import { WorkoutInstance } from '../../model/WorkoutInstance';
+import { WorkoutInstance } from '../../model/workoutInstance';
 
 @Injectable()
 export class WorkoutsService {
