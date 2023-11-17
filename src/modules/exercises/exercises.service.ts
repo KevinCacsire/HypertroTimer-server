@@ -33,4 +33,10 @@ export class ExercisesService {
         const exercisesRef = doc(firestore, 'users', userId, 'splits', splitId, 'sessions', sessionId, 'exercises', exerciseId);
         await updateDoc(exercisesRef, { exerciseName, exerciseType, indexOrder });
     }
+
+    async putExercises(userId: string, splitId: string, sessionId: string, exercises: Exercise[]): Promise<void> {
+        for (const exercise of exercises) {
+          await this.updateExercise(userId, splitId, sessionId, exercise.exerciseId, exercise.exerciseName, exercise.exerciseType, exercise.indexOrder);
+        }
+      }
 }

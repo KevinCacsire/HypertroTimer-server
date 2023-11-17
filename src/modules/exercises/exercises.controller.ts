@@ -45,4 +45,14 @@ export class ExercisesController {
   ) : Promise<void> {
     await this.exercisesService.updateExercise(userId, splitId, sessionId, exerciseId, body.exerciseName, body.exerciseType, body.indexOrder);
   }
+
+  @Put(':sessionId/exercises')
+  async putExercises(
+    @Param('userId') userId: string,
+    @Param('splitId') splitId: string,
+    @Param('sessionId') sessionId: string,
+    @Body() exercises: Exercise[]
+  ): Promise<void> {
+    await this.exercisesService.putExercises(userId, splitId, sessionId, exercises);
+  }
 }

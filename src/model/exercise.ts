@@ -10,6 +10,8 @@ export class Exercise {
 
     @IsNotEmpty()
     indexOrder: number = 0;
+    
+    exerciseType: string = '';
 
     @IsNotEmpty()
     reps?: number;
